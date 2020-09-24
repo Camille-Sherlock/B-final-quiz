@@ -5,24 +5,21 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Builder
-@Entity(name="gtb_group")
-public class Group {
+@Data
+@Entity
+public class Trainer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String groupName;
-
-    @OneToMany
-    List<Trainee> trainees;
-
-    @OneToMany
-    List<Trainer> trainers;
+    @NotNull
+    private String name;
 }
