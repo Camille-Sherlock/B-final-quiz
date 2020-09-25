@@ -12,7 +12,8 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Builder
-@Entity(name="gtb_group")
+@Entity
+@Table(name="gtb_group")
 public class Group {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,9 +21,9 @@ public class Group {
 
     private String groupName;
 
-    @OneToMany
+    @OneToMany(mappedBy = "group",cascade = CascadeType.ALL,orphanRemoval = true)
     List<Trainee> trainees;
 
-    @OneToMany
+    @OneToMany(mappedBy = "group",cascade = CascadeType.ALL,orphanRemoval = true)
     List<Trainer> trainers;
 }
