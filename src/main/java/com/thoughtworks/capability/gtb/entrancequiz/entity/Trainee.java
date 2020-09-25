@@ -1,4 +1,4 @@
-package com.thoughtworks.capability.gtb.entrancequiz.domain;
+package com.thoughtworks.capability.gtb.entrancequiz.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,17 +9,32 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Data
 @Entity
-public class Trainer {
+public class Trainee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @NotNull
     private String name;
+
+    @NotNull
+    private String office;
+
+    @NotNull
+    @Email
+    private String email;
+
+    @NotNull
+    private String github;
+
+    @NotNull
+    private String zoomId;
 }

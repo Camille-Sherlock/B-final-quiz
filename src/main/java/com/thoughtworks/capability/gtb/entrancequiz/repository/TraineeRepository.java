@@ -1,13 +1,13 @@
 package com.thoughtworks.capability.gtb.entrancequiz.repository;
 
-import com.thoughtworks.capability.gtb.entrancequiz.domain.Trainee;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.thoughtworks.capability.gtb.entrancequiz.entity.Trainee;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface TraineeRepository extends JpaRepository<Trainee,Long> {
+public interface TraineeRepository extends CrudRepository<Trainee,Long> {
 
     List<Trainee> findAllByGrouped(Boolean grouped);
 }

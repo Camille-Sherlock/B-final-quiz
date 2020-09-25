@@ -1,6 +1,6 @@
 package com.thoughtworks.capability.gtb.entrancequiz.repository;
 
-import com.thoughtworks.capability.gtb.entrancequiz.domain.Trainer;
+import com.thoughtworks.capability.gtb.entrancequiz.entity.Trainer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

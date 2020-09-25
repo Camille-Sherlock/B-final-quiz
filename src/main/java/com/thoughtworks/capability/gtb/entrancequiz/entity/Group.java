@@ -1,4 +1,4 @@
-package com.thoughtworks.capability.gtb.entrancequiz.domain;
+package com.thoughtworks.capability.gtb.entrancequiz.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
