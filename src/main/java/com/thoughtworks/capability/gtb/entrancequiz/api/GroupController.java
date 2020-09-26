@@ -18,6 +18,7 @@ import java.util.List;
             this.groupService = groupService;
         }
 
+        //TODO GTB：如果没有定制化的返回需求，可以省略ResponseEntity
         @GetMapping
         public ResponseEntity<List<Group>> getGroups(){
             return ResponseEntity.ok(groupService.findAllGroups());

@@ -20,6 +20,7 @@ public class Group {
 
     private String groupName;
 
+    //TODO GTB：思考一下，group这边需要维护这两个list吗？
     @OneToMany
     List<Trainee> trainees;
 

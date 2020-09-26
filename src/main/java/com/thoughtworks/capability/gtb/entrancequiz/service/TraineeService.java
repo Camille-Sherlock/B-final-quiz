@@ -19,7 +19,7 @@ public class TraineeService {
     public Trainee addTrainee(Trainee trainee){
         return traineeRepository.save(trainee);
     }
-
+    //TODO GTB：未使用到的方法，不需要保留
     public Trainee findTraineeById(Long trainee_id) throws CommunicationException {
         Optional<Trainee> trainee = traineeRepository.findById(trainee_id);
         if(!trainee.isPresent()){
